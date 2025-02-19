@@ -3,16 +3,24 @@
 
 def permutar(numero):
 
-    while numero != 1:
+    fatorial = []
 
-          valor = numero * (numero - 1)
-          numero -= 1
+    # Adiciona os números de 1 até numero na lista
+    for elemento in range(1, numero + 1):
+        fatorial.append(elemento)
 
-          lista = []
-          lista.append(valor)
-          total = sum(lista)
+    # Inicializa resultado antes do loop
+    resultado = 1
+    for valor in fatorial:
+        resultado = resultado * valor
 
+    total = []
+    total.append(resultado)
+    valor_final = total[-1]
 
-          return total
+    return valor_final
+
 
 print(permutar(5))
+
+
